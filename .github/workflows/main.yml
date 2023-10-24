@@ -19,11 +19,6 @@ jobs:
           java-version: 17
           distribution: 'adopt'
 
-      - name: Go in the right directory
-        run: cd 'backend/'
-
-      - name: Debug
-        run : pwd
       #finally build your app with the latest command
-#      - name: Build and test with Maven
-#        run: mvn clean verify
+      - name: Build and test with Maven
+        run: mvn --file ./backend/pom.xml clean verify
