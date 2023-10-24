@@ -56,7 +56,7 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops:database
           push: ${{ github.ref == 'refs/heads/main' }}
 
-      - name: Build image and push httpd
+      - name: Build image and push http
         # DO the same for httpd
         uses: docker/build-push-action@v3
         with:
