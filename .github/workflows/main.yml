@@ -19,9 +19,8 @@ jobs:
           java-version: 17
           distribution: 'adopt'
 
-      - name: Get right directory
-        run: cd backend/
 
       #finally build your app with the latest command
       - name: Build and test with Maven
-        run: mvn clean verify
+        run: cd ../backend
+             mvn clean verify
