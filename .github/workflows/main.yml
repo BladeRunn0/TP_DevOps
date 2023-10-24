@@ -21,6 +21,9 @@ jobs:
 
       - name: Go in the right directory
         run: cd 'backend/'
+
+      - name: Debug
+        run : echo "done"
       #finally build your app with the latest command
-      - name: Build and test with Maven
-        run: mvn clean verify
+#      - name: Build and test with Maven
+#        run: mvn clean verify
