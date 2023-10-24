@@ -20,7 +20,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Go in the right directory
-        run: cd ../backend
+        run: cd ././backend
       #finally build your app with the latest command
       - name: Build and test with Maven
         run: mvn clean verify
