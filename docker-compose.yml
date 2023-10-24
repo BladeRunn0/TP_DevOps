@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+    backend:
+      container_name: tp_backend_student
+      build: ./backend
+      networks:
+        - my-network
+      depends_on:
+        - database
+
+    database:
+      container_name: tp_database
+      build: ./Database
+      networks:
+        - my-network
+
+    httpd:
+      container_name: tp_http
+      build: ./HTTP
+      ports:
+        - "8082:80"
+      networks:
+        - my-network
+      depends_on:
+        - backend
+
+networks:
+  my-network:
