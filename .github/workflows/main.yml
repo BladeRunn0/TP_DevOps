@@ -23,7 +23,7 @@ jobs:
         run: cd 'backend/'
 
       - name: Debug
-        run : echo "done"
+        run : pwd
       #finally build your app with the latest command
 #      - name: Build and test with Maven
 #        run: mvn clean verify
