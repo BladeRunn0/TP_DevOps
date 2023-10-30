@@ -44,7 +44,7 @@ jobs:
           context: ./backend
           # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-backend:latest
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'refs/heads/master' }}
 
       - name: Build image and push database
         # DO the same for database
@@ -54,7 +54,7 @@ jobs:
           context: ./Database
           # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-database:latest
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'refs/heads/master' }}
 
       - name: Build image and push http
         # DO the same for httpd
@@ -64,4 +64,4 @@ jobs:
           context: ./HTTP
           # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-http:latest
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'refs/heads/master' }}
