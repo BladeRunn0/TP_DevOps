@@ -1,0 +1,7 @@
+- name: Run front
+  docker_container:
+    name: tp_front
+    image: bladerunner0/tp-devops-front:latest
+    pull: true
+    networks:
+      - name: app-network
