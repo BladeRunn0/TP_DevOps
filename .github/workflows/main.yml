@@ -87,4 +87,8 @@ jobs:
           pip install ansible
 
       - name: Run Ansible playbook
-        run: ansible-playbook -i ansible/inventories/setup.yml ansible/playbook.yml
+        uses: ansible/ansible-runner@v2
+        with:
+          version: 2.11.5
+          inventory: ansible/inventories/setup.yml
+          playbook: ansible/playbook.yml
