@@ -2,5 +2,10 @@
   docker_container:
     name: tp_database
     image: bladerunner0/tp-devops-database:latest
+    pull: true
+    env:
+      POSTGRES_DB: "db"
+      POSTGRES_USER: "usr"
+      POSTGRES_PASSWORD: "pwd"
     networks:
       - name: app-network

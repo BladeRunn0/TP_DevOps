@@ -2,3 +2,6 @@
   docker_container:
     name: tp_backend_student
     image: bladerunner0/tp-devops-backend:latest
+    pull: true
+    networks:
+      - name: app-network
