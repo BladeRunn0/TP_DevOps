@@ -1,0 +1,8 @@
+- name: Run HTTPD
+  docker_container:
+    name: tp_http
+    image: bladerunner0/tp-devops-http:latest
+    networks:
+      - name: app-network
+    published_ports:
+      - "8082:80"

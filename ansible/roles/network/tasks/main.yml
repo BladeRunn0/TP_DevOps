@@ -1,0 +1,4 @@
+- name: Create network
+  community.docker.docker_network:
+    name: app-network
+  become: yes

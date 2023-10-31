@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - /mnt/c/users/louis/Desktop/5A/DevOps/roles/network

@@ -1,0 +1,6 @@
+- name: Run database
+  docker_container:
+    name: tp_database
+    image: bladerunner0/tp-devops-database:latest
+    networks:
+      - name: app-network
