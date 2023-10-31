@@ -66,6 +66,16 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-http:latest
           push: ${{ github.ref == 'refs/heads/master' }}
 
+      - name: Build image and push front
+        # DO the same for httpd
+        uses: docker/build-push-action@v3
+        with:
+          # relative path to the place where source code with Dockerfile is located
+          context: ./front
+          # Note: tags has to be all lower-case
+          tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-front:latest
+          push: ${{ github.ref == 'refs/heads/master' }}
+
 
   start-ansible:
     needs: build-and-push-docker-image
@@ -85,10 +95,3 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install ansible
-
-      - name: Run Ansible playbook
-        uses: ansible/ansible-runner@v2
-        with:
-          version: 2.11.5
-          inventory: ansible/inventories/setup.yml
-          playbook: ansible/playbook.yml

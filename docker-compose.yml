@@ -4,6 +4,8 @@ services:
     backend:
       container_name: tp_backend_student
       build: ./backend
+      ports:
+        - "8080:8080"
       networks:
         - my-network
       depends_on:
@@ -20,6 +22,16 @@ services:
       build: ./HTTP
       ports:
         - "8082:80"
+      networks:
+        - my-network
+      depends_on:
+        - front
+
+    front:
+      container_name: tp_front
+      build: ./front
+      ports:
+        - "8083:80"
       networks:
         - my-network
       depends_on:
