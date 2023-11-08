@@ -23,11 +23,12 @@ Dans cette partie, nous créons une base de données que nous allons initialiser
 tourner grâce à Docker. Pour la visualiser nous utilisons l'application Adminer.
 
 Tout d'abord, le script Dockerfile ressemble à :
+
 `FROM postgres:14.1-alpine
 
 ENV POSTGRES_DB=db \
 POSTGRES_USER=usr \
-POSTGRES_PASSWORD=pwd`
+POSTGRES_PASSWORD=pwd```
 
 Dans ce dernier, on déclare la version de système de base de données à utiliser. On renseigne 
 ensuite les variables nécessaires au fonctionnement de la base de données.
