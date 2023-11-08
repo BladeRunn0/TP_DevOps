@@ -2,6 +2,7 @@
   gather_facts: false
   become: yes
 
+  # Declaring roles in playbook in the right order
   roles:
     - docker
     - network
@@ -9,24 +10,3 @@
     - backend
     - front
     - httpd
-#  # Install Docker
-#  tasks:
-#    - name: Include Docker role
-#      include_role:
-#        name: docker  # Replace with the name of your Docker role
-#
-#    - name: Create network
-#      include_role:
-#        name: network
-#
-#    - name: Launch database
-#      include_role:
-#        name: database
-#
-#    - name: Launch backend
-#      include_role:
-#        name: backend
-#
-#    - name: Launch proxy
-#      include_role:
-#        name: httpd

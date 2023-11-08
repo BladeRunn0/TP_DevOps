@@ -33,7 +33,7 @@ scratch before starting the containers
 
 
 ## Question 5
-When laucnhing docker compose, 3 images are created. To publish on Doker hub, it is necessary to tag and push each one of them:
+When laucnhing docker compose, 3 images are created. To publish on Docker hub, it is necessary to tag and push each one of them:
 `docker tag <IMAGE_NAME> USERNAME/<IMAGE_NAME>:1.0`
 `docker push USERNAME/<IMAGE_NAME>:1.0`
 
