@@ -26,9 +26,9 @@ Tout d'abord, le script Dockerfile ressemble à :
 
 `FROM postgres:14.1-alpine
 
-ENV POSTGRES_DB=db \
-POSTGRES_USER=usr \
-POSTGRES_PASSWORD=pwd```
+ENV POSTGRES_DB=db
+POSTGRES_USER=usr
+POSTGRES_PASSWORD=pwd`
 
 Dans ce dernier, on déclare la version de système de base de données à utiliser. On renseigne 
 ensuite les variables nécessaires au fonctionnement de la base de données.
